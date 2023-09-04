@@ -6,7 +6,7 @@ def graphic_country(continent):
     abv = str(input('Ingrese la abreviacion del pais a graficar = ')).upper()
     country = next((country for country in continent if abv == country['CCA3']), None)
     if country:
-      labels = [1970, 1980, 1990, 2000, 2010, 2015, 2020, 2022]
+      labels = ['1970', '1980', '1990', '2000', '2010', '2015', '2020', '2022']
       values = [
         int(country["1970 Population"]), 
         int(country["1980 Population"]), 

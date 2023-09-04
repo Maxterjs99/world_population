@@ -2,7 +2,7 @@ from read_csv import choose_data
 
 def main():
     print('*****Bienvenido al graficador de Poblacion*****')
-    choose = int(input('Ingrese 1 para graficar el modelo poblacional de un paiso o ingrese otra tecla y enter para salir = '))
+    choose = int(input('Ingrese 1 para graficar el modelo poblacional de un pais o ingrese otra tecla y enter para salir = '))
     
     if choose == 1:
         choose_data()
