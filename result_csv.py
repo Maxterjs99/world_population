@@ -22,6 +22,17 @@ def graphic_country(continent):
     else:
       print("Abreviación incorrecta. Intente de nuevo.")
 
+def graphic_population(values):
+  labels = ['1970', '1980', '1990', '2000', '2010', '2015', '2020', '2022']
+  generate_bar_chart(labels, values)
+  
+def generate_pie_chart(labels, values):
+  fig, ax = plt.subplots()
+  ax.pie(values, labels=labels)
+  # Aca indicamos que muestre una gráfica de torta
+  ax.axis('equal')
+  plt.show()
+  
 # funcion para grafico de barra
 def generate_bar_chart(labels, values):
   fig, ax = plt.subplots()
