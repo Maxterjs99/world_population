@@ -83,4 +83,3 @@ def read_csv(path):
       country_dict = {key : value for key, value in iterable}
       data.append(country_dict)
     return data
-
