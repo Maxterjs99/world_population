@@ -68,7 +68,7 @@ def world_pop_percentage(data):
   percentages_dict = {country["Country/Territory"]: country["World Population Percentage"] for country in data}
   names = percentages_dict.keys()
   per = percentages_dict.values()
-  return result.generate_pie_chart(names, per)
+  return result.generate_pie_chart('world_percentage',names, per)
 
 # funcion abrir archivo
 def read_csv(path):

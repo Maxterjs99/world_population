@@ -17,25 +17,26 @@ def graphic_country(continent):
         int(country["2020 Population"]), 
         int(country["2022 Population"])
       ]
-      generate_bar_chart(labels, values)
+      generate_bar_chart(country['Country/Territory'],labels, values)
       break
     else:
       print("Abreviación incorrecta. Intente de nuevo.")
 
 def graphic_population(values):
   labels = ['1970', '1980', '1990', '2000', '2010', '2015', '2020', '2022']
-  generate_bar_chart(labels, values)
+  generate_bar_chart('pop_world',labels, values)
  
 #Grafico de torta 
-def generate_pie_chart(labels, values):
+def generate_pie_chart(name, labels, values):
   fig, ax = plt.subplots()
   ax.pie(values, labels=labels)
   # Aca indicamos que muestre una gráfica de torta
   ax.axis('equal')
-  plt.show()
+  plt.savefig(f'./imgs/{name}.png')
+  plt.close()
   
 # funcion para grafico de barra
-def generate_bar_chart(labels, values):
+def generate_bar_chart(name, labels, values):
   fig, ax = plt.subplots()
   #son dos valores que nos da la librería, fig es como la figura y ax se refire a las coordenadas donde  vamos a empezar a graficar
   ax.bar(labels, values)
@@ -46,5 +47,6 @@ def generate_bar_chart(labels, values):
   #Eje Y
   plt.title('Población a lo largo de los años')
   #Titulo del grafico
-  plt.show()
+  plt.savefig(f'./imgs/{name}.png')
+  plt.close()
   #muestra la grafica de barras
