@@ -3,7 +3,7 @@ import csv
 import result_csv as result
 
 def choose_data(validator):
-  data = read_csv('C:/Users/maxte/Escritorio/Python_Projects/world_population/world_population.csv')
+  data = read_csv('world_population.csv')
   if validator == 1:
     return continente_data(data)
   elif validator == 2:
